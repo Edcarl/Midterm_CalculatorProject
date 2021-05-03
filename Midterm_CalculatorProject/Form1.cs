@@ -145,5 +145,47 @@ namespace Midterm_CalculatorProject
             operation = '-';
             input = string.Empty;
         }
+
+        private void btnequals_Click(object sender, EventArgs e)
+        {
+            value2 = input;
+            double num1, num2;
+            double.TryParse(value1, out num1);
+            double.TryParse(value2, out num2);
+
+            txtOutput.Text = "";
+            this.input = string.Empty;
+            this.value1 = string.Empty;
+            this.value2 = string.Empty;
+
+
+            if (operation == '+')
+            {
+                total = num1 + num2;
+                txtOutput.Text = total.ToString();
+            }
+            else if (operation == '-')
+            {
+                total = num1 - num2;
+                txtOutput.Text = total.ToString();
+            }
+            else if (operation == '*')
+            {
+                total = num1 * num2;
+                txtOutput.Text = total.ToString();
+            }
+            else if (operation == '/')
+            {
+                if (num2 != 0)
+                {
+                    total = num1 / num2;
+                    txtOutput.Text = total.ToString();
+                }
+                else
+                {
+                    txtOutput.Text = "DIV/Zero!";
+                }
+            }
+        }
     }
 }

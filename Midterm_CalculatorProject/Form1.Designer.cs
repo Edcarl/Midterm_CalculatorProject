@@ -206,6 +206,7 @@ namespace Midterm_CalculatorProject
             this.btnequals.TabIndex = 11;
             this.btnequals.Text = "=";
             this.btnequals.UseVisualStyleBackColor = false;
+            this.btnequals.Click += new System.EventHandler(this.btnequals_Click);
             // 
             // btnadd
             // 
@@ -292,7 +293,7 @@ namespace Midterm_CalculatorProject
             this.txtOutput.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtOutput.Location = new System.Drawing.Point(8, 41);
             this.txtOutput.Name = "txtOutput";
-            this.txtOutput.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtOutput.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtOutput.Size = new System.Drawing.Size(365, 52);
             this.txtOutput.TabIndex = 19;
             this.txtOutput.Text = "";
